@@ -1,18 +1,7 @@
-.title {
-  color: #C2022F;
-  font-weight: 900;
-  font-style: 36px;
-  transform: skewX(-15deg);
-}
-
 .copyright {
   color: #999999;
 }
 
-.global-nav {
-  &__list {}
-
-  &__item {
-    margin: 20px;
-  }
+.spacer {
+  flex: 1 1 auto;
 }
