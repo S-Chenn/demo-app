@@ -5,6 +5,14 @@
   transform: skewX(-15deg);
 }
 
-.copyright{
-  color:  #999999;
+.copyright {
+  color: #999999;
+}
+
+.global-nav {
+  &__list {}
+
+  &__item {
+    margin: 20px;
+  }
 }

@@ -1,13 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1 class="title">
-    Welcome to {{ title }}!
-  </h1>
+<header class="header">
+  <p class="title" routerLink="/">
+    {{ title }}!
+  </p>
   <nav class="global-nav">
     <ul class="global-nav__list">
-      <li class="global-nav__item">Help!</li>
+      <li class="global-nav__item">
+        <a routerLink="/help">Help</a>
+      </li>
     </ul>
   </nav>
+</header>
 <router-outlet></router-outlet>
 
 <footer class="footer">
