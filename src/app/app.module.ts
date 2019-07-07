@@ -8,6 +8,11 @@ import { TopComponent } from "./top/top.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatToolbarModule } from "@angular/material";
 import { SharedModule } from "./shared/shared.module";
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent, HelpComponent, TopComponent],
@@ -15,6 +20,10 @@ import { SharedModule } from "./shared/shared.module";
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule,
     BrowserAnimationsModule,
     SharedModule
   ],
