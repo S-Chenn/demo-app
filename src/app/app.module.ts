@@ -12,9 +12,10 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, HelpComponent, TopComponent],
+  declarations: [AppComponent, HelpComponent, TopComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
