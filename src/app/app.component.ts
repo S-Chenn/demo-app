@@ -10,11 +10,9 @@ import { auth } from 'firebase/app';
 export class AppComponent {
   title = 'demo-chat-app';
 
-  constructor(public afAuth: AngularFireAuth) {
-    this.afAuth.authState.subscribe(afUser => {
-      console.log(afUser);
-    })
-  }
+  afUser$ = this.afAuth.authState;
+
+  constructor(public afAuth: AngularFireAuth) {}
   login() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
