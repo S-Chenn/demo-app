@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo-chat-app';
+  title = 'cool-chat';
 
   afUser$ = this.afAuth.authState;
 
