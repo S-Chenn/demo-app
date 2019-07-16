@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ChatService } from '../services/chat.service';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-top',
@@ -15,7 +14,8 @@ export class TopComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private chatService: ChatService
+    private chatService: ChatService,
+    private snackBar: MatSnackBar
     ) { }
 
   ngOnInit() {
@@ -31,9 +31,16 @@ export class TopComponent implements OnInit {
 
   createRoom() {
     if(this.form.valid) {
-    this.chatService.createRoom(this.form.value.name);
+      this.chatService.createRoom(this.form.value.name).then(() => {
+        this.form.reset();
+        this.snackBar.open('ルームの作成が完了しました！', null, {
+          duration: 3000
+        });
+      });
     }else {
-    alert("ルーム名を入力してください。");
+      this.snackBar.open('正しいルーム名を入力してください。', null, {
+        duration: 3000
+      });
     }
   }
 }
