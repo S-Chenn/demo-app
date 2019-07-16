@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormGroupDirective } from '@angular/forms';
 import { ChatService } from '../services/chat.service';
 import { MatSnackBar } from '@angular/material';
 
@@ -10,6 +10,7 @@ import { MatSnackBar } from '@angular/material';
 })
 export class TopComponent implements OnInit {
 
+  @ViewChild(FormGroupDirective, null) myForm;
   form: FormGroup;
 
   constructor(
@@ -33,6 +34,7 @@ export class TopComponent implements OnInit {
     if(this.form.valid) {
       this.chatService.createRoom(this.form.value.name).then(() => {
         this.form.reset();
+        this.myForm.resetForm();
         this.snackBar.open('ルームの作成が完了しました！', null, {
           duration: 3000
         });
