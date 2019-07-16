@@ -17,7 +17,8 @@ export class TopComponent implements OnInit {
       name: ['', [
         Validators.required,
         Validators.maxLength(16),
-        Validators.minLength(4)
+        Validators.minLength(4),
+        Validators.pattern('^(?![ 　]+).*$')
       ]]
     })
   }
