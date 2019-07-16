@@ -2,4 +2,12 @@
   <h1 class="top_heading">
     ルームを作成する
   </h1>
+  <form [formGroup]="form" (ngSubmit)="createRoom()" class="top-form">
+    <mat-form-field class="form-title">
+      <mat-label class="mat-label">ルーム名</mat-label>
+      <input formControlName="name" matInput required autocomplete="off" maxlength="16">
+      <mat-hint>※最大16文字まで</mat-hint>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="form.invalid">作成</button>
+  </form>
 </div>
