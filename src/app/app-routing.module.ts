@@ -5,6 +5,7 @@ import { TopComponent } from './top/top.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { GuestGuard } from './guards/guest.guard';
+import { RoomListComponent } from './room-list/room-list.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
   {
     path: "help",
     component:HelpComponent
+  },{
+    path: "room-list",
+    component:RoomListComponent
   },
   {
     path: "login",
