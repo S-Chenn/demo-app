@@ -5,6 +5,7 @@
       {{ title }}!
     </span>
     <span class="spacer"></span>
+    <button mat-button routerLink="/room-list">ルーム一覧</button>
     <button mat-button routerLink="/help">Help</button>
     <button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" mat-mini-fab class="avator" *ngIf="afUser$ | async as afUser"
       [style.background-image]="'url(' + afUser.photoURL +')'"></button>
