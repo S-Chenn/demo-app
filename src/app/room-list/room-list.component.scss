@@ -3,6 +3,7 @@
   margin: 0 auto;
   border-radius: 16px;
   border: 2px solid #3F51B5;
+
   &__heading {
     font-weight: 600;
     font-size: 28px;
@@ -14,7 +15,38 @@
   }
 
   &__content {
-    margin: 20px;
+    margin: 60px 40px;
+    color: #333;
+  }
 
+  &__list {
+
+    &-item {
+      margin-bottom: 80px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    &-detail {
+      margin-bottom: 20px;
+    }
+
+    &-lead {
+      margin-bottom: 40px;
+    }
+
+    &-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      color: #999;
+    }
   }
 }
