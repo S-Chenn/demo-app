@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chatroom',
@@ -9,10 +7,7 @@ import { Router } from '@angular/router';
 })
 export class ChatroomComponent implements OnInit {
 
-  afUser$ = this.afAuth.authState;
-
-  constructor(public afAuth: AngularFireAuth,
-    private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
   }
