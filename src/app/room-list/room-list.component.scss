@@ -1,6 +1,6 @@
 .room-list {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 80px auto;
   border-radius: 16px;
   border: 2px solid #3F51B5;
 
@@ -22,10 +22,14 @@
   &__list {
 
     &-item {
-      margin-bottom: 80px;
+      margin-bottom: 40px;
+      padding: 40px;
+      border-bottom: 1px solid #ccc;
 
       &:last-child {
         margin-bottom: 0;
+        border: none;
+        padding: 0;
       }
     }
 
