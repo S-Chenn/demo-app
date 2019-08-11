@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="chat">
+    <h1 class="chat__title">パンダ好き集まれ！</h1>
+    <div class="chat__content chat-self">
+        <button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" mat-mini-fab class="avator"
+        [style.background-image]="'url(' + afUser.photoURL +')'"></button>
+      <div class="col">
+        <p class="chat__content-userName">pandafleak</p>
+        <p class="chat__content-text">今日上野動物園言ってきたよー！美味しそうに笹を食べていてこっちまで食べたくなっちゃった。</p>
+      </div>
+    </div>
+    <div class="chat__content">
+        <button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" mat-mini-fab class="avator"
+        [style.background-image]="'url(' + afUser.photoURL +')'"></button>
+        <div class="col">
+          <p class="chat__content-userName">PandaSpirits</p>
+          <p class="chat__content-text">へぇー</p>
+        </div>
+      </div>
+  </div>
+</div>
