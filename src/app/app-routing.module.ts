@@ -7,6 +7,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { GuestGuard } from './guards/guest.guard';
 import { RoomListComponent } from './room-list/room-list.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   },{
     path: "chatroom",
     component:ChatroomComponent
+  },
+  {
+    path: "account",
+    component:AccountComponent
   },
   {
     path: "login",
