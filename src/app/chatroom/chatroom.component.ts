@@ -11,5 +11,4 @@ export class ChatroomComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

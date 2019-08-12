@@ -15,9 +15,10 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './login/login.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
-  declarations: [AppComponent, HelpComponent, TopComponent, LoginComponent, RoomListComponent, ChatroomComponent],
+  declarations: [AppComponent, HelpComponent, TopComponent, LoginComponent, RoomListComponent, ChatroomComponent, AccountComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
